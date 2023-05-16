@@ -64,7 +64,7 @@ Using XGBoost, the RMSE is 1.077, which is better than ARIMA.
 
 To improve the model performance, I tried moving average of total sales in different time range. Here’s the performance chart using different approaches.
 
-Total Sales (original data) -> RMSE (training set) = 0.944 and RMSE (test set) = 1.077 
+Total Sales (original data) -> RMSE (training set) = 0.944 and RMSE (test set) = 1.077
 simple moving average of total sales (min_periods = 3) -> RMSE (training set) = 0.63 and RMSE (test set) = 1.09 
 simple moving average of total sales (min_periods = 12) -> RMSE (training set) = 0.54 and RMSE (test set) = 1.14
 Cumulative moving average of total sales -> RMSE (training set) = 0.372 and RMSE (test set) = 1.17
