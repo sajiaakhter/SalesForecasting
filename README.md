@@ -64,12 +64,12 @@ Using XGBoost, the RMSE is 1.077, which is better than ARIMA.
 
 To improve the model performance, I tried moving average of total sales in different time range. Here’s the performance chart using different approaches.
 
-Total Sales (original data) -> RMSE (training set) = 0.944 and RMSE (test set) = 1.077
-simple moving average of total sales (min_periods = 3) -> RMSE (training set) = 0.63 and RMSE (test set) = 1.09 
-simple moving average of total sales (min_periods = 12) -> RMSE (training set) = 0.54 and RMSE (test set) = 1.14
-Cumulative moving average of total sales -> RMSE (training set) = 0.372 and RMSE (test set) = 1.17
-Exponential moving average of total sales (min_periods = 12) -> RMSE (training set) = 0.515 and RMSE (test set) = 1.1
-Exponential moving average of total sales (min_periods = 3) -> RMSE (training set) = 0.6789 and RMSE (test set) = 1.04
+- Total Sales (original data) -> RMSE (training set) = 0.944 and RMSE (test set) = 1.077
+- simple moving average of total sales (min_periods = 3) -> RMSE (training set) = 0.63 and RMSE (test set) = 1.09 
+- simple moving average of total sales (min_periods = 12) -> RMSE (training set) = 0.54 and RMSE (test set) = 1.14
+- Cumulative moving average of total sales -> RMSE (training set) = 0.372 and RMSE (test set) = 1.17
+- Exponential moving average of total sales (min_periods = 12) -> RMSE (training set) = 0.515 and RMSE (test set) = 1.1
+- Exponential moving average of total sales (min_periods = 3) -> RMSE (training set) = 0.6789 and RMSE (test set) = 1.04
 
 So, the model gives the best prediction (where RMSE is 1.04) using exponential moving average of total sales for time period 3.
 
