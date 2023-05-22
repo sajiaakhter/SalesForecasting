@@ -76,5 +76,15 @@ So, the model gives the best prediction (where RMSE is 1.04) using exponential m
 # Build and Deploy API for the prediction model
 
 For deploying my prediction model, I used FastAPI and ColabCode.
-- First, I created a 
 
+- First, using FutureSalesPrediction.ipynb, I train a XGBoost model and generate a pickled model file called futureSalesXGBoost.pkl,
+
+- Then, for the FastAPI architecture, I create a data class for the inputs. This data class allows FastAPI to validate the inputs. After that, I create an endpoint (using futureSalesXGBoost.pkl) where all the requests will be served.
+
+- Using ColabCode, I create a server which is ready to receive the FastAPI object with the help of ngrok. The server generates a ngrok link for the model application. Codes are in FutureSalesPredictionDeployment.ipynb. To run this code, upload futureSalesXGBoost.pkl in the root directory of colab.
+
+- To access the model application  
+	- Click the ngrok link
+	- Click ‘Visit Sites’
+	- in the url add ‘/docs’
+	- go to ‘post’ then ‘Try it out’
