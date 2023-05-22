@@ -73,3 +73,8 @@ To improve the model performance, I tried moving average of total sales in diffe
 
 So, the model gives the best prediction (where RMSE is 1.04) using exponential moving average of total sales for time period 3.
 
+# Build and Deploy API for the prediction model
+
+For deploying my prediction model, I used FastAPI and ColabCode.
+- First, I created a 
+
